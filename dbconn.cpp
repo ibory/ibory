@@ -94,7 +94,7 @@ bool dbconn::insertData2DB(match::DATA *dataset, uint data_cnt) {
         delete con;
 
     } catch (sql::SQLException &e) {
-        printf("# ERR: SQLException in %s ( %s ) on line %s\n", __FILE__, __FUNCTION__, __LINE__);
+        printf("# ERR: SQLException in %s ( %s ) on line %d\n", __FILE__, __FUNCTION__, __LINE__);
         printf("# ERR: $s %s\n", e.what());
         printf("(MySQL error code: $s, SQLState: %s )\n", e.getErrorCode(), e.getSQLState());
     }
